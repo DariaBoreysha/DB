@@ -2,6 +2,7 @@ import com.github.javafaker.Faker;
 import org.example.Main;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 import java.sql.SQLException;
 import java.util.Random;
 
