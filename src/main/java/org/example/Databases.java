@@ -21,7 +21,6 @@ public class Databases {
     private static String username = null;
     private static String password = null;
     private Connection connection;
-    Database database;
 
     public Databases() {
 
@@ -31,10 +30,6 @@ public class Databases {
             username = (String) data.get("username");
             password = (String) data.get("password");
             url = (String) data.get("url");
-            /*database = yaml.load(fileInputStream);
-            password = database.getPassword();
-            username = database.getUsername();
-            url = database.getUrl();*/
         } catch (IOException e) {
             System.out.println("Couldn't find .yaml file");
         }
