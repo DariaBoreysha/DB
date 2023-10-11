@@ -58,7 +58,7 @@ public class User {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + "{id: " + id_user
+        return getClass().getSimpleName() + " {id: " + id_user
                 + ", username: " + username
                 + ", email: " + email
                 + ", password: " + password
