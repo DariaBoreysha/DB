@@ -30,20 +30,18 @@ public class Databases {
             username = (String) data.get("username");
             password = (String) data.get("password");
             url = (String) data.get("url");
-        } catch (IOException e) {
-            System.out.println("Couldn't find .yaml file");
-        }
-
-        try {
             Driver driver = new org.postgresql.Driver();
             DriverManager.registerDriver(driver);
             connection = DriverManager.getConnection(url, username, password);
             if (!connection.isClosed()) {
                 System.out.println("Соединение с БД установлено!");
             }
+        } catch (IOException e) {
+            System.out.println("Couldn't find .yaml file");
         } catch (SQLException e) {
             System.out.println("Не удалось найти файл драйвера");
         }
+
     }
 
     public Connection getConnection() {

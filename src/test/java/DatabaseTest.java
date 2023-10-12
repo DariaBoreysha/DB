@@ -43,7 +43,7 @@ public class DatabaseTest {
     }
 
     @Test
-    public void changeUsersPassword() {
+    public void changeUserPassword() {
         int numberOfRows = main.getNumberOfRows();
         int id = random.nextInt(numberOfRows - 1 + 1) + 1;
         String before = main.selectUserPassword(id);
